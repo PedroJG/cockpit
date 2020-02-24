@@ -1851,8 +1851,8 @@ PageNetworking.prototype = {
                 var tx = samples[1][0];
                 var row = $('#networking-interfaces tr[data-sample-id="' + encodeURIComponent(iface) + '"]');
                 if (rx !== undefined && tx !== undefined && row.length > 0) {
-                    row.find('td:nth-child(5)').text("on: (" + cockpit.format_bits_per_sec(tx * 8) +
-                        " / " + cockpit.format_bits_per_sec(rx * 8) + ")");
+                    row.find('td:nth-child(5)').text(cockpit.format_bits_per_sec(tx * 8));
+                    row.find('td:nth-child(6)').text(cockpit.format_bits_per_sec(rx * 8));
                 }
             }
         }
