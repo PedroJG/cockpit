@@ -5181,6 +5181,7 @@ function init() {
 
         $(cockpit).on("locationchanged", navigate);
         navigate();
+        console.log(model.get_settings());
     });
 }
 
